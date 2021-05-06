@@ -27,9 +27,5 @@ public class CommentRepository implements ICommentRepository{
         }
         commentsForPost.add(comment);
         comments.put(post.getId(),commentsForPost);
-        System.out.println("SAVED COMMENT");
-        System.out.println(comment);
-        System.out.println(post);
-
     }
 }
