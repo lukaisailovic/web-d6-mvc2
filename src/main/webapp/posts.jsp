@@ -15,7 +15,7 @@
             </h1>
         </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-3">
         <div class="col col-md-6">
             <ul class="list-group">
                 <c:forEach var="post" items="${posts}">
@@ -37,7 +37,7 @@
                         <p>
                             <c:out value="${post.getTruncatedContent()}"/>
                         </p>
-                        <a href="" class="text-decoration-none text-muted">
+                        <a href="<%=application.getContextPath()%>/post/<c:out value="${post.getId()}"/>" class="text-decoration-none text-muted">
                             Opsirnije...
                         </a>
                     </li>
