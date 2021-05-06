@@ -14,7 +14,7 @@
     </div>
     <div class="row justify-content-center mt-5">
         <div class="col-md-6">
-            <form action="<%=application.getContextPath()%>/new-post/" method="post">
+            <form action="<%=application.getContextPath()%>/new-post" method="post">
 
                 <div class="form-group my-1">
                     <label for="author">Author:</label>
