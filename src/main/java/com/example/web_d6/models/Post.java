@@ -3,14 +3,13 @@ package com.example.web_d6.models;
 import java.util.Date;
 
 public class Post {
-    private final int id;
+    private int id = 0;
     private final String author;
     private final String title;
     private final String content;
     private final Date createdAt;
 
-    public Post(int id,String author, String title, String content) {
-        this.id = id;
+    public Post(String author, String title, String content) {
         this.author = author;
         this.title = title;
         this.content = content;
@@ -19,6 +18,10 @@ public class Post {
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getAuthor() {

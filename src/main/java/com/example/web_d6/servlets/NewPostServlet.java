@@ -29,7 +29,7 @@ public class NewPostServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Post post = new Post(1,req.getParameter("author"),req.getParameter("title"),req.getParameter("content"));
+        Post post = new Post(req.getParameter("author"),req.getParameter("title"),req.getParameter("content"));
         this.postRepository.save(post);
         System.out.println("Post: "+post);
         resp.sendRedirect(req.getContextPath() + "/posts");
