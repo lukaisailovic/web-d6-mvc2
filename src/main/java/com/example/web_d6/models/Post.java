@@ -13,7 +13,7 @@ public class Post {
         this.author = author;
         this.title = title;
         this.content = content;
-        this.createdAt = new Date(System.currentTimeMillis());
+        this.createdAt = new Date();
     }
 
     public int getId() {
@@ -30,6 +30,14 @@ public class Post {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getTruncatedContent(){
+        int end = 150;
+        if (this.content.length() < end){
+            end = this.content.length();
+        }
+        return this.content.substring(0,end);
     }
 
     public String getContent() {
