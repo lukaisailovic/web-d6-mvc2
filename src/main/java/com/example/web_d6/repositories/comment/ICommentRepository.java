@@ -8,7 +8,6 @@ import java.util.List;
 
 public interface ICommentRepository {
 
-    List<Comment> all();
 
     List<Comment> findByPost(Post post);
 

@@ -33,6 +33,7 @@ public class PostServlet extends HttpServlet {
         int id = Integer.parseInt(req.getPathInfo().substring(1));
         Post post = this.postRepository.find(id);
         req.setAttribute("post", post);
+        req.setAttribute("comments",this.commentRepository.findByPost(post));
         System.out.println(post);
         req.getRequestDispatcher("/post.jsp").forward(req, resp);
     }

@@ -32,6 +32,15 @@
             <h4>
                 Comments
             </h4>
+            <c:forEach var="comment" items="${comments}">
+                <h5>
+                    <c:out value="${comment.getAuthor()}"/>
+                </h5>
+                <p>
+                    <c:out value="${comment.getContent()}"/>
+                </p>
+
+            </c:forEach>
         </div>
     </div>
     <div class="row justify-content-center mt-5">

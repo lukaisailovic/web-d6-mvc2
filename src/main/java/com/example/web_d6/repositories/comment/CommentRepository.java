@@ -12,10 +12,7 @@ public class CommentRepository implements ICommentRepository{
 
     private static final Map<Integer, List<Comment>> comments = new ConcurrentHashMap<>();
 
-    @Override
-    public List<Comment> all() {
-        return null;
-    }
+
 
     @Override
     public List<Comment> findByPost(Post post) {
@@ -30,5 +27,9 @@ public class CommentRepository implements ICommentRepository{
         }
         commentsForPost.add(comment);
         comments.put(post.getId(),commentsForPost);
+        System.out.println("SAVED COMMENT");
+        System.out.println(comment);
+        System.out.println(post);
+
     }
 }
