@@ -12,6 +12,11 @@
             </h1>
         </div>
     </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <a href="<%=application.getContextPath()%>/new-post" class="btn btn-primary">New post</a>
+        </div>
+    </div>
 </div>
 </body>
 </html>

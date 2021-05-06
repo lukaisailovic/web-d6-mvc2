@@ -8,11 +8,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet(name = "postsServlet", value = "/posts")
-public class PostsServlet extends HttpServlet {
+@WebServlet(name = "newPostsServlet", value = "/new-post")
+public class NewPostServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("posts.jsp").forward(req,resp);
+        req.getRequestDispatcher("new-post.jsp").forward(req,resp);
     }
 }
