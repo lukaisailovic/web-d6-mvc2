@@ -34,6 +34,29 @@
             </h4>
         </div>
     </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <h4>
+                New Comment
+            </h4>
+            <form action="<%=application.getContextPath()%>/post/${post.getId()}" method="post">
+
+                <div class="form-group my-1">
+                    <label for="author">Author:</label>
+                    <input type="text" class="form-control" name="author" id="author">
+                </div>
+
+                <div class="form-group my-1">
+                    <label for="content">Comment:</label>
+                    <textarea name="content" id="content" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-primary">Comment</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 </body>
 </html>
